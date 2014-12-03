@@ -2,12 +2,10 @@
 <html>
 <head>
   <link href="css/normalize.min.css" rel="stylesheet" type="text/css" />
-  <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
+<!--  <link href="css/foundation.min.css" rel="stylesheet" type="text/css" /> -->
   <link href="css/app.css" rel="stylesheet" type="text/css" />
   <meta charset="utf-8">
-  <title>Robot Nixon</title>
-  <style>
-  </style>
+  <title>Nixon AI</title>
 </head>
 <body>
   <div class="background">
@@ -19,30 +17,19 @@
     <div class="layer layer6"></div>
   </div>
   <section class="content">
-    <div class="row">
-      <div class="large-12 columns panel ui">
-        <img src="img/nixon.gif" class="avatar">
-        <div class="chat-output">
-          <p>Welcome to Robot Nixon</p>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="row collapse">
-              <div class="small-10 columns">
-                <input type="text" placeholder=">">
-              </div>
-              <div class="small-2 columns">
-                <a href="#" class="button postfix">Ask</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      
+    <div class="ui">
+      <img src="img/nixon.gif" class="avatar">
+      <div class="chat-output">
+        <p>NixonAI</p>
+      </div>
+      <form>
+        <input type="text" placeholder=">" class="input">
+        <input type="button" value="Add" class="button postfix">
+      </form>
     </div>
   </section>
-
-  <script src="/vendor_components/jquery-1.11.1.min.js"></script>
-  <script src="/vendor_components/jquery.xmlrpc.min.js"></script>
-
+  <script src="scripts/vendor_components/jquery-1.11.1.min.js"></script>
+  <script src="scripts/vendor_components/jquery.xmlrpc.min.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
