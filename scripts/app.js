@@ -25,6 +25,7 @@ $(document).ready(function() {
   }
 
   var showResponse = function(responsePhrase){
+    outputTarget.append('<p class="user">' + $('#inputField').val() + '</p>');
     $('#inputField').val("");
     var outputTarget = $('#outputField');
     outputTarget.append('<p>' + responsePhrase + '</p>');
