@@ -19,12 +19,12 @@
   <section class="content">
     <div class="ui">
       <img src="img/nixon.gif" class="avatar">
-      <div class="chat-output">
+      <div id="outputField" class="chat-output">
         <p>NixonAI</p>
       </div>
-      <form>
-        <input type="text" placeholder=">" class="input">
-        <input type="button" value="Add" class="button postfix">
+      <form id="inputForm">
+        <input type="text"  name="input" placeholder=">" id="inputField" class="input">
+        <input type="submit" value="Say" id="sendButton" class="button postfix">
       </form>
     </div>
   </section>
