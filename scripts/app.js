@@ -26,7 +26,9 @@ $(document).ready(function() {
 
   var showResponse = function(responsePhrase){
     $('#inputField').val("");
-    $('#outputField').append('<p>' + responsePhrase + '</p>');
+    var outputTarget = $('#outputField');
+    outputTarget.append('<p>' + responsePhrase + '</p>');
+    outputTarget.animate({ scrollTop: outputTarget.attr("scrollHeight") - outputTarget.height() }, 500);
   }
 
   $('#inputForm').on('submit', submitForm);
