@@ -1,21 +1,22 @@
 * {
-box-sizing: border-box;
+box-sizing:border-box
 }
-body, html{
+body,html {
+font-family:'Courier New',Courier,monospace;
+position:relative;
 height:100%;
 margin:0;
 padding:0;
-position:relative;
-background:#000 url("../img/drop.gif");
 color:#fff;
-font-family:"Courier New", Courier, monospace;
+background:#000 url(../img/drop.gif)
 }
-.background, .layer, .content{
+/* --- ANIMATION LAYERS --- */
+.background,.layer,.content {
 position:absolute;
 top:0;
-bottom:0;
-left:0;
 right:0;
+bottom:0;
+left:0
 }
 .layer1{
 background:transparent url('../img/gibson-b-1.png') repeat;
@@ -65,7 +66,7 @@ background:transparent url('../img/gibson-w-2.png') repeat;
      -o-animation:scroll 40s linear infinite;
         animation:scroll 40s linear infinite;
 }
-/* Animation Keyframes*/
+/* --- ANIMATION KEYFRAMES --- */
 @-webkit-keyframes scroll{
   from {background-position:0px 0px;}
   to {background-position:0px 512px;}
@@ -82,55 +83,55 @@ background:transparent url('../img/gibson-w-2.png') repeat;
   from {background-position:150px 0px;}
   100%{background-position:150px 512px;}
 }
-/* CONTENT SECTION */
-.ui{
-background:rgb(20, 20, 20);
-background:rgba(0, 0, 0, .9);
+/* --- CONTENT SECTION --- */
+.ui {
 position:absolute;
-width:100%;
 top:10%;
 bottom:10%;
 left:0;
-padding: 1.5em;
-border-top: 1px solid #333;
-border-bottom: 1px solid #333;
+width:100%;
+padding:1.5em;
+border-top:1px solid #333;
+border-bottom:1px solid #333;
+background:#141414;
+background:rgba(0,0,0,.9)
 }
-.avatar{
-border:1px solid #999;
+.avatar {
 float:left;
 margin-right:1em;
+border:1px solid #999
 }
-.chat-output{
-height:90%;
-background:#000;
-color:green;
-border-top:1px solid #999;
-border:1px solid #999;
+.chat-output {
 overflow:scroll;
-padding:.5em;
+height:90%;
 margin-bottom:1em;
+padding:.5em;
+color:green;
+border:1px solid #999;
+border-top:1px solid #999;
+background:#000
 }
-.ui p{
-color:limegreen;
+.ui p {
+color:#32cd32
 }
-.ui .input{
-height: 2em;
-width: 80%;
+.ui .input {
+width:80%;
+height:2em
 }
-.button{
-border: none;
-text-align: center;
-background-color:limegreen;
-color:#000;
-line-height: 2em;
-padding: 0;
-cursor: pointer;
-display: block;
-text-decoration: none;
-font-weight: bold;
-width: 20%;
+.button {
+font-weight:700;
+line-height:2em;
+display:block;
 float:right;
+width:20%;
+padding:0;
+cursor:pointer;
+text-align:center;
+text-decoration:none;
+color:#000;
+border:none;
+background-color:#32cd32
 }
-.button:hover{
-  background-color: #99FF99;
+.button:hover {
+background-color:#9f9
 }
