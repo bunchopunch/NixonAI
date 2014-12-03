@@ -1,14 +1,15 @@
 $(document).ready(function() {
   var inputElement = $('#inputField'),
-  bot = 'e49450c12e3420ff'
-  customer = 'NAIclient' + Math.floor((Math.random() * 100000));
+  bot = 'e49450c12e3420ff',
+  customer = 'NAIclient' + Math.floor((Math.random() * 100000)),
+  apiUrl = 'http://www.pandorabots.com/pandora/talk-xml';
 
   var submitForm = function(){
     if(inputElement.val().length === 0){
       return false
     } else {
-      $.post( 'http://www.pandorabots.com/pandora/talk-xml', 
-        {botid: 'e49450c12e3420ff', input: 'Hi', custid: 'NAIclient'},
+      $.post( apiUrl, 
+        {botid: bot, input: $('#inputField').val(), custid: customer},
         function() {})
         .done(function(data) {
           var content = $(data).find( "that" ).text(); // Get the text out of the XML response
@@ -24,7 +25,6 @@ $(document).ready(function() {
   }
 
   var showResponse = function(responsePhrase){
-    console.log(responsePhrase);
     $('#inputField').val("");
     $('#outputField').append('<p>' + responsePhrase + '</p>');
   }
