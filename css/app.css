@@ -1,0 +1,137 @@
+* {
+box-sizing:border-box
+}
+body,html {
+font-family:'Courier New',Courier,monospace;
+position:relative;
+height:100%;
+margin:0;
+padding:0;
+color:#fff;
+background:#000 url(../img/drop.gif)
+}
+/* --- ANIMATION LAYERS --- */
+.background,.layer,.content {
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0
+}
+.layer1{
+background:transparent url('../img/gibson-b-1.png') repeat;
+-webkit-animation:scroll 5s linear infinite;
+   -moz-animation:scroll 5s linear infinite;
+    -ms-animation:scroll 5s linear infinite;
+     -o-animation:scroll 5s linear infinite;
+        animation:scroll 5s linear infinite;
+}
+.layer2{
+background:transparent url('../img/gibson-b-2.png') repeat;
+-webkit-animation:scrollShift 10s linear infinite;
+   -moz-animation:scrollShift 10s linear infinite;
+    -ms-animation:scrollShift 10s linear infinite;
+     -o-animation:scrollShift 10s linear infinite;
+        animation:scrollShift 10s linear infinite;
+}
+.layer3{
+background:transparent url('../img/gibson-r-1.png') repeat;
+-webkit-animation:scrollShift 10s linear infinite;
+   -moz-animation:scrollShift 10s linear infinite;
+    -ms-animation:scrollShift 10s linear infinite;
+     -o-animation:scrollShift 10s linear infinite;
+        animation:scrollShift 10s linear infinite;
+}
+.layer4{
+background:transparent url('../img/gibson-r-2.png') repeat;
+-webkit-animation:scroll 3s linear infinite;
+   -moz-animation:scroll 3s linear infinite;
+    -ms-animation:scroll 3s linear infinite;
+     -o-animation:scroll 3s linear infinite;
+        animation:scroll 3s linear infinite;
+}
+.layer5{
+background:transparent url('../img/gibson-w-1.png') repeat;
+-webkit-animation:scroll 5s linear infinite;
+   -moz-animation:scroll 5s linear infinite;
+    -ms-animation:scroll 5s linear infinite;
+     -o-animation:scroll 5s linear infinite;
+        animation:scroll 5s linear infinite;
+}
+.layer6{
+background:transparent url('../img/gibson-w-2.png') repeat;
+-webkit-animation:scroll 40s linear infinite;
+   -moz-animation:scroll 40s linear infinite;
+    -ms-animation:scroll 40s linear infinite;
+     -o-animation:scroll 40s linear infinite;
+        animation:scroll 40s linear infinite;
+}
+/* --- ANIMATION KEYFRAMES --- */
+@-webkit-keyframes scroll{
+  from {background-position:0px 0px;}
+  to {background-position:0px 512px;}
+}
+@-webkit-keyframes scrollShift{
+  from {background-position:150px 0px;}
+  100%{background-position:150px 512px;}
+}
+@-moz-keyframes scroll{
+  from {background-position:0px 0px;}
+  to {background-position:0px 512px;}
+}
+@-moz-keyframes scrollShift{
+  from {background-position:150px 0px;}
+  100%{background-position:150px 512px;}
+}
+/* --- CONTENT SECTION --- */
+.ui {
+position:absolute;
+top:10%;
+bottom:10%;
+left:0;
+width:100%;
+padding:1.5em;
+border-top:1px solid #333;
+border-bottom:1px solid #333;
+background:#141414;
+background:rgba(0,0,0,.9)
+}
+.avatar {
+float:left;
+margin-right:1em;
+border:1px solid #999
+}
+.chat-output {
+overflow:scroll;
+height:90%;
+margin-bottom:1em;
+padding:.5em;
+color:green;
+border:1px solid #999;
+border-top:1px solid #999;
+background:#000
+}
+.ui p {
+color:#32cd32
+}
+.ui .input {
+width:80%;
+height:2em
+}
+.button {
+font-weight:700;
+line-height:2em;
+display:block;
+float:right;
+width:20%;
+padding:0;
+cursor:pointer;
+text-align:center;
+text-decoration:none;
+color:#000;
+border:none;
+background-color:#32cd32
+}
+.button:hover {
+background-color:#9f9
+}
