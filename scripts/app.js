@@ -25,9 +25,9 @@ $(document).ready(function() {
   }
 
   var showResponse = function(responsePhrase){
+    var outputTarget = $('#outputField');
     outputTarget.append('<p class="user">' + $('#inputField').val() + '</p>');
     $('#inputField').val("");
-    var outputTarget = $('#outputField');
     outputTarget.append('<p>' + responsePhrase + '</p>');
     outputTarget.animate({ scrollTop: outputTarget.attr("scrollHeight") - outputTarget.height() }, 500);
   }
