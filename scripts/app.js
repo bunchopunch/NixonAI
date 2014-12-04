@@ -5,15 +5,14 @@ $(document).ready(function() {
   apiUrl = 'http://www.pandorabots.com/pandora/talk-xml';
 
   var submitForm = function(){
-    var currentOutgoingMessage = inputElement.val().toString();
-    $('#inputField').val("");
-    outputTarget.append('<p class="user">' + currentOutgoingMessage + '</p>');
+    outputTarget.append('<p class="user">' + inputElement.val() + '</p>');
     showMostRecent();
     if(inputElement.val().length === 0){
       return false
     } else {
+      $('#inputField').val("");
       $.post( apiUrl, 
-        {botid: bot, input: currentOutgoingMessage, custid: customer},
+        {botid: bot, input: inputElement.val(), custid: customer},
         function() {})
         .done(function(data) {
           var content = $(data).find( "that" ).text(); // Get the text out of the XML response
