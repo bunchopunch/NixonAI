@@ -10,11 +10,11 @@ $(document).ready(function() {
     if(inputElement.val().length === 0){
       return false
     } else {
-      $('#inputField').val("");
       $.post( apiUrl, 
-        {botid: bot, input: inputElement.val(), custid: customer},
+        {botid: bot, input: $('#inputField').val(), custid: customer},
         function() {})
         .done(function(data) {
+          $('#inputField').val("");
           var content = $(data).find( "that" ).text(); // Get the text out of the XML response
           showResponse(content);
         })
