@@ -5,9 +5,9 @@ $(document).ready(function() {
   apiUrl = 'http://www.pandorabots.com/pandora/talk-xml';
 
   var submitForm = function(){
-    outputTarget.append('<p class="user">' + inputElement.val() + '</p>');
+    $('#outputField').append('<p class="user">' + $('#inputField').val() + '</p>');
     showMostRecent();
-    if(inputElement.val().length === 0){
+    if($('#inputField').val().length === 0){
       return false
     } else {
       $.post( apiUrl, 
