@@ -8,6 +8,7 @@ $(document).ready(function() {
     var currentOutgoingMessage = inputElement.val().toString();
     $('#inputField').val("");
     outputTarget.append('<p class="user">' + currentOutgoingMessage + '</p>');
+    showMostRecent();
     if(inputElement.val().length === 0){
       return false
     } else {
@@ -30,7 +31,12 @@ $(document).ready(function() {
   var showResponse = function(responsePhrase){
     var outputTarget = $('#outputField');
     outputTarget.append('<p>' + responsePhrase + '</p>');
-    outputTarget.animate({ scrollTop: outputTarget.attr("scrollHeight") - outputTarget.height() }, 500);
+    showMostRecent();
+  }
+
+  var showMostRecent = function(){
+    var objDiv = document.getElementById("outputField");
+    objDiv.scrollTop = objDiv.scrollHeight;
   }
 
   $('#inputForm').on('submit', submitForm);
